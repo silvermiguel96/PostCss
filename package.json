@@ -1,0 +1,23 @@
+{
+  "name": "Cursopostcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvermiguel96/PostCss.git"
+  },
+  "keywords": [],
+  "author": "MiguelangelRedonCuartas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvermiguel96/PostCss/issues"
+  },
+  "homepage": "https://github.com/silvermiguel96/PostCss#readme",
+  "dependencies": {
+    "postcss-cli": "^5.0.0"
+  }
+}
