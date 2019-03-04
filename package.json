@@ -19,6 +19,7 @@
   "homepage": "https://github.com/silvermiguel96/PostCss#readme",
   "dependencies": {
     "autoprefixer": "^9.4.9",
-    "postcss-cli": "^5.0.0"
+    "postcss-cli": "^5.0.0",
+    "postcss-preset-env": "^6.6.0"
   }
 }
