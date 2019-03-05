@@ -6,25 +6,22 @@ body {
   --darkColor: #15192a;
   --lightColor: white;
   --warningColor: red;
-  --button: {
-    border: 1px solid white;
-    border: 1px solid var(--lightColor);
-    border-radius: 5px;
-    background: var(--darckColor);
-    color: white;
-    color: var(--lightColor);
-    padding: .5em 2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 14px;
-    border-bottom: 5px solid white;
-    border-bottom: 5px solid var(--lightColor)
-  };
   --viewportHeight: 50vh;
 }
 
 .btn {
-  @apply --button;
+  border: 1px solid white;
+  border: 1px solid var(--lightColor);
+  border-radius: 5px;
+  background: var(--darckColor);
+  color: white;
+  color: var(--lightColor);
+  padding: .5em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 5px solid white;
+  border-bottom: 5px solid var(--lightColor);
 }
 
 .btn.warning {
@@ -86,6 +83,26 @@ body {
 .logo {
   width: calc(100% - 100px);
   margin: 0 auto;
+  /*background-image: image-set(url de la imagen densidad, url de la imagen densidad);*/
+  background-image: url('../../src/images/platzi-video.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.logo {
+  background-image:  url('../../src/images/platzi-video-2x.png');
+}
+}
+@media (-webkit-min-device-pixel-ratio: 3.12), (-webkit-min-device-pixel-ratio: 3.125), (min-resolution: 300dpi) {
+.logo {
+  background-image:  url('../../src/images/platzi-video-3x.png');
+}
+}
+.logo {
+  background-image: -webkit-image-set(url('../../src/images/platzi-video.png') 1x, url('../../src/images/platzi-video-2x.png') 2x, url('../../src/images/platzi-video-3x.png') 300dpi);
+  background-image: image-set(url('../../src/images/platzi-video.png') 1x, url('../../src/images/platzi-video-2x.png') 2x, url('../../src/images/platzi-video-3x.png') 300dpi);
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .logo-image {
   margin: 0;
