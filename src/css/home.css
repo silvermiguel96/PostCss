@@ -17,6 +17,7 @@ body {
     font-size: 14px;
     border-bottom: 5px solid var(--lightColor)
   };
+  --viewportHeight: 50vh;
 }
 
 .btn {
@@ -29,10 +30,10 @@ body {
 
 /*home layout*/
 .home {
-  /* autoprefixer: off */
   background: var(--lightColor);
   display: grid;
-  height: 100vh;
+  /*height: calc(var(--viewportHeight) * 2);*/
+  height: calc(50vh * 2);
   grid-template-columns: 350px 1fr;
   grid-template-rows: 1fr 150px;
   grid-template-areas: "sidebar primary"
@@ -63,9 +64,10 @@ body {
 }
 
 /*Logo*/
-/* .logo {
-
-} */
+.logo {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
 .logo-image {
   margin: 0;
 }
@@ -245,4 +247,37 @@ body {
 .featuring-album {
   font-size: 1.3em;
   margin: 10px;
+}
+
+/*@custom-media --small screen and (max-width: 768px);*/
+@custom-media --extra-small (width < 480px);
+@custom-media --small screen and (width < 768px);
+@custom-media --medium screen and (width >= 768px);
+@custom-media --large screen and (width >= 1024px);
+
+@media (--small) {
+  body {
+    border: 10px solid blue;
+  }
+  .home {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+  }
+  .featuring {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
+}
+
+@media (--extra-small) {
+  body {
+    border: 10px solid orange;
+  }
 }
